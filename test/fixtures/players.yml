@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Full_Name: 
+  Rating: 
+  Jersey_No: 
+  Birthday: 
+  Height: 
+  Weight: 
+  Salary: 
+  Country: one
+  Team: one
+
+two:
+  Full_Name: 
+  Rating: 
+  Jersey_No: 
+  Birthday: 
+  Height: 
+  Weight: 
+  Salary: 
+  Country: two
+  Team: two
