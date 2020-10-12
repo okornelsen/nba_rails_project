@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_12_170906) do
-
+ActiveRecord::Schema.define(version: 20_201_012_170_906) do
   create_table "arenas", force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -34,12 +33,12 @@ ActiveRecord::Schema.define(version: 2020_10_12_170906) do
   end
 
   create_table "player_positions", force: :cascade do |t|
-    t.integer "Player_id", null: false
-    t.integer "Position_id", null: false
+    t.integer "player_id", null: false
+    t.integer "position_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["Player_id"], name: "index_player_positions_on_Player_id"
-    t.index ["Position_id"], name: "index_player_positions_on_Position_id"
+    t.index ["player_id"], name: "index_player_positions_on_player_id"
+    t.index ["position_id"], name: "index_player_positions_on_position_id"
   end
 
   create_table "players", force: :cascade do |t|
@@ -50,12 +49,12 @@ ActiveRecord::Schema.define(version: 2020_10_12_170906) do
     t.string "height"
     t.integer "weight"
     t.float "salary"
-    t.integer "Country_id", null: false
-    t.integer "Team_id", null: false
+    t.integer "country_id", null: false
+    t.integer "team_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["Country_id"], name: "index_players_on_Country_id"
-    t.index ["Team_id"], name: "index_players_on_Team_id"
+    t.index ["country_id"], name: "index_players_on_country_id"
+    t.index ["team_id"], name: "index_players_on_team_id"
   end
 
   create_table "positions", force: :cascade do |t|
@@ -65,12 +64,12 @@ ActiveRecord::Schema.define(version: 2020_10_12_170906) do
   end
 
   create_table "team_fans", force: :cascade do |t|
-    t.integer "Team_id", null: false
-    t.integer "Fan_id", null: false
+    t.integer "team_id", null: false
+    t.integer "fan_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["Fan_id"], name: "index_team_fans_on_Fan_id"
-    t.index ["Team_id"], name: "index_team_fans_on_Team_id"
+    t.index ["fan_id"], name: "index_team_fans_on_fan_id"
+    t.index ["team_id"], name: "index_team_fans_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -79,17 +78,17 @@ ActiveRecord::Schema.define(version: 2020_10_12_170906) do
     t.string "abbreviation"
     t.string "general_Manager"
     t.string "head_Coach"
-    t.integer "Arena_id", null: false
+    t.integer "arena_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["Arena_id"], name: "index_teams_on_Arena_id"
+    t.index ["arena_id"], name: "index_teams_on_arena_id"
   end
 
-  add_foreign_key "player_positions", "Players"
-  add_foreign_key "player_positions", "Positions"
-  add_foreign_key "players", "Countries"
-  add_foreign_key "players", "Teams"
-  add_foreign_key "team_fans", "Fans"
-  add_foreign_key "team_fans", "Teams"
-  add_foreign_key "teams", "Arenas"
+  add_foreign_key "player_positions", "players"
+  add_foreign_key "player_positions", "positions"
+  add_foreign_key "players", "countries"
+  add_foreign_key "players", "teams"
+  add_foreign_key "team_fans", "fans"
+  add_foreign_key "team_fans", "teams"
+  add_foreign_key "teams", "arenas"
 end

@@ -8,8 +8,8 @@ class CreatePlayers < ActiveRecord::Migration[6.0]
       t.string :height
       t.integer :weight
       t.float :salary
-      t.references :Country, null: false, foreign_key: true
-      t.references :Team, null: false, foreign_key: true
+      t.references :country, null: false, foreign_key: true
+      t.references :team, null: false, foreign_key: true
 
       t.timestamps
     end

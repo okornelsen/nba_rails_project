@@ -6,7 +6,7 @@ class CreateTeams < ActiveRecord::Migration[6.0]
       t.string :abbreviation
       t.string :general_Manager
       t.string :head_Coach
-      t.references :Arena, null: false, foreign_key: true
+      t.references :arena, null: false, foreign_key: true
 
       t.timestamps
     end
