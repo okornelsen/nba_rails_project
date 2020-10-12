@@ -1,11 +1,11 @@
 require "csv"
 
 # PlayerPosition.delete_all
-# TeamFan.delete_all
+TeamFan.delete_all
 Team.delete_all
 Arena.delete_all
 # Country.delete_all
-# Fan.delete_all
+Fan.delete_all
 # Position.delete_all
 # Player.delete_all
 
@@ -20,13 +20,7 @@ end
 arenas = load_csv("arena.csv")
 teams = load_csv("team.csv")
 
-# 10.times do
-#   fan = Fan.new(full_Name: Faker::Name.name)
-#   fan.save
-# end
-#
-# fans = Fan.all
-
+# LOAD ARENAS INTO DB
 arenas.each do |arena|
   Arena.create(
     name:     arena["name"],
@@ -34,6 +28,7 @@ arenas.each do |arena|
   )
 end
 
+# LOAD TEAMS INTO DB BY WAY OF ARENA_ID
 teams.each do |team|
   arena = Arena.find_by(name: team["arena"])
   if arena.valid?
@@ -45,10 +40,20 @@ teams.each do |team|
       head_Coach:      team["head_coach"]
     )
 
-    puts team_to_create.inspect
     unless team_to_create.valid?
       puts "Could not create team: #{team['name']}"
       next
+    end
+
+    # LOAD FANS INTO DB BY WAY OF TEAM_ID AND FAKER
+    rand(1..10).times do
+      fan = Fan.new(full_Name: Faker::Name.name)
+      fan.save
+
+      TeamFan.create(
+        team: team_to_create,
+        fan:  fan
+      )
     end
 
   else
@@ -56,5 +61,4 @@ teams.each do |team|
   end
 end
 
-puts Arena.count
-puts Team.count
+puts Fan.count
