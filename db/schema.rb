@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_201_012_170_906) do
+ActiveRecord::Schema.define(version: 2020_10_12_170906) do
+
   create_table "arenas", force: :cascade do |t|
     t.string "name"
     t.string "location"
