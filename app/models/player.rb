@@ -1,6 +1,6 @@
 class Player < ApplicationRecord
-  belongs_to :Country
-  belongs_to :Team
+  belongs_to :country
+  belongs_to :team
   has_many :player_positions
   has_many :positions, through: :player_positions
 
