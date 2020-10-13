@@ -1,4 +1,4 @@
 class PlayerPosition < ApplicationRecord
-  belongs_to :Player
-  belongs_to :Position
+  belongs_to :player
+  belongs_to :position
 end

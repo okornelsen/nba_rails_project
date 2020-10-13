@@ -1,6 +1,6 @@
 require "csv"
 
-# PlayerPosition.delete_all
+PlayerPosition.delete_all
 Player.delete_all
 TeamFan.delete_all
 Team.delete_all
@@ -96,6 +96,18 @@ players.each do |player|
       salary:    player["salary"],
       team_id:   team.id
     )
+
+    # LOAD POSITIONS INTO DB BY WAY OF PLAYER AND POSITION
+    ps = player["position"].split(",")
+    ps.each do |p|
+      posi = Position.find_by(position: p)
+
+      PlayerPosition.create(
+        player:   player_to_create,
+        position: posi
+      )
+    end
+
   else
     puts "Error with #{player['name']}"
   end

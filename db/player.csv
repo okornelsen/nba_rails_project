@@ -1,18 +1,18 @@
 name,rating,jersey,team,position,birthday,height,weight,salary,country
 Kawhi Leonard,97,2,Clippers,Forward,6/29/91,07-Jun,225,32742000,United States
 LeBron James,97,23,Lakers,Forward,12/30/84,09-Jun,250,37436858,United States
-Giannis Antetokounmpo,96,34,Bucks,"Forward, Guard",12/06/94,11-Jun,242,25842697,Greece
+Giannis Antetokounmpo,96,34,Bucks,"Forward,Guard",12/06/94,11-Jun,242,25842697,Greece
 Kevin Durant,96,7,Nets,Forward,9/29/88,10-Jun,230,37199000,United States
 James Harden,96,13,Rockets,Guard,8/26/89,05-Jun,220,38199000,United States
 Stephen Curry,95,30,Warriors,Guard,3/14/88,03-Jun,185,40231758,United States
-Anthony Davis,94,3,Lakers,"Forward, Center",3/11/93,10-Jun,222,27093019,United States
+Anthony Davis,94,3,Lakers,"Forward,Center",3/11/93,10-Jun,222,27093019,United States
 Paul George,93,13,Clippers,Forward,5/02/90,08-Jun,210,33005556,United States
 Damian Lillard,92,0,Trail Blazers,Guard,7/15/90,02-Jun,195,29802321,United States
 Kyrie Irving,91,11,Nets,Guard,3/23/92,02-Jun,180,31742000,Australia
 Joel Embiid,91,21,76ers,Center,3/16/94,01-Jul,250,27504630,Cameroon
 Nikola Jokic,90,15,Nuggets,Center,2/19/95,01-Jul,253,27504630,Serbia
 Russell Westbrook,90,0,Rockets,Guard,11/12/88,03-Jun,190,38506482,United States
-Karl-Anthony Towns,89,32,Timberwolves,"Forward, Center",11/15/95,11-Jun,248,27285000,United States
+Karl-Anthony Towns,89,32,Timberwolves,"Forward,Center",11/15/95,11-Jun,248,27285000,United States
 Klay Thompson,89,11,Warriors,Guard,2/08/90,06-Jun,205,32742000,United States
 Rudy Gobert,88,27,Jazz,Center,6/26/92,01-Jul,238,25258427,France
 Kemba Walker,88,8,Celtics,Guard,5/08/90,01-Jun,172,32742000,United States
@@ -24,7 +24,7 @@ Pascal Siakam,87,43,Raptors,Forward,4/02/94,09-Jun,227,2351838,Cameroon
 Kristaps Porzingis,87,6,Mavericks,"Forward,Center",8/02/95,03-Jul,220,27285000,Latvia
 Luka Doncic,87,77,Mavericks,"Guard,Forward",2/28/99,07-Jun,227,7683360,Slovenia
 Mike Conley,87,10,Jazz,Guard,10/11/87,01-Jun,185,32511623,United States
-LaMarcus Aldridge,87,12,Spurs,"Forward, Center",7/19/85,11-Jun,246,26000000,United States
+LaMarcus Aldridge,87,12,Spurs,"Forward,Center",7/19/85,11-Jun,246,26000000,United States
 Bradley Beal,87,3,Wizards,Guard,6/28/93,03-Jun,207,27093018,United States
 CJ McCollum,87,3,Trail Blazers,Guard,9/19/91,03-Jun,197,27556959,United States
 Victor Oladipo,87,4,Pacers,Guard,5/04/92,04-Jun,213,21000000,United States
