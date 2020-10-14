@@ -8,4 +8,8 @@ class Player < ApplicationRecord
   validates :full_Name, uniqueness: true
   validates :rating, :jersey_No, :weight, numericality: { only_integer: true }
   validates :salary, numericality: true
+
+  def positions_list
+    positions.map(&:position)
+  end
 end

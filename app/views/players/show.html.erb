@@ -1,10 +1,25 @@
-<h2 class="title is-4">Players of the NBA</h2>
+<h2 class=""><%= link_to 'Players of the NBA', players_path %></h2>
 
-<p><%= @player.full_Name %></p>
+<h4><%= @player.full_Name %></h4>
 <p>
   <strong>Rating:</strong>
-  <%= @player.rating %>%
-  <progress class="progress is-warning" value="<%= @player.rating%>" max="100"></progress>
+  <%= @player.rating %>
+  <progress class="progress" value="<%= @player.rating%>" max="100"></progress>
+</p>
+<p>
+  <strong>Team:</strong>
+  <%= link_to "#{@player.team.city} #{@player.team.name}", @player.team %>
+</p>
+<p>
+  <% if @player.positions_list.size > 1 %>
+    <strong>Primary Position:</strong>
+    <%= @player.positions_list.first %> <br>
+    <strong>Secondary Position:</strong>
+    <%=  @player.positions_list.last %>
+  <% else %>
+    <strong>Primary Position:</strong>
+    <%=  @player.positions_list.first %>
+  <% end %>
 </p>
 <p>
   <strong>Jersey Number:</strong>
@@ -27,6 +42,6 @@
   <%= number_to_currency(@player.salary) %>
 </p>
 <p>
-  <strong>Team:</strong>
-  <%= link_to "#{@player.team.city} #{@player.team.name}", @player.team %>
+  <strong>Country:</strong>
+  <%= @player.country.name %>
 </p>

@@ -1,3 +1,9 @@
-<h2 class="title is-4">Teams of the NBA</h2>
+<h2 class=""><%= link_to 'Teams of the NBA', teams_path %></h2>
 
-<p><%= "#{@team.city} #{@team.name}" %></p>
+<h4><%= "#{@team.city} #{@team.name}" %></h4>
+
+<ul>
+  <% @team.players.each do |player| %>
+    <li><%= link_to player.full_Name, player %></li>
+  <% end %>
+</ul>
