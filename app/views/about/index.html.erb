@@ -1,2 +1,32 @@
-<h1>About#index</h1>
-<p>Find me in app/views/about/index.html.erb</p>
+<h2 class="">About</h2>
+
+<h4>Objective</h4>
+<p>The purpose of this project is to test my knowledge in Ruby on Rails
+by developing a fully navigable website full of content gathered from
+multiple data sources. With that assigned it was up to me to choose my
+content and how I want to go about creating this project.</p>
+
+<p>I chose to focus on a very large interest of mine, that being basketball.
+I have decided to make a website based on the NBA teams and players along
+with several attached information that comes with those criterion. My main
+table is driven by the players of the NBA, coming from a data source found
+<a href="https://www.kaggle.com/isaienkov/nba2k20-player-dataset">here</a> (200+ entries).
+<p>The relationships the players table has will include the team the player plays
+for, the position they play, and the country they are from, with data sources
+found here;</p>
+<p><a href="https://www.kaggle.com/nathanlauga/nba-games?select=teams.csv">Team:</a> (30 entries)<br>
+Position: Self created (3 entries)<br>
+<a href="https://www.kaggle.com/fernandol/countries-of-the-world">Country:</a> (200+ entries)</p>
+<p>The relationships the team table has is the associated arenas they play in,
+and the fans associated with them, with data sources found here;</p>
+<p><a href="https://www.kaggle.com/nathanlauga/nba-games?select=teams.csv">Arena:</a> (30 entries)<br>
+Fan: Faker-generated (200+ entries)</p>
+
+<h4>Database Structure</h4>
+<p>Each web page will consist data gathered from multiple data sources.
+Provided below is an Entity Relationship Diagram that displays how each
+table interacts with the other, as well as a short description of the
+associations and use of each table.</p>
+<div class="text-center m-5">
+  <img src='/assets/ERD.jpg' width="500">
+</div>
