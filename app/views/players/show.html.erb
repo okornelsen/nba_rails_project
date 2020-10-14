@@ -1,2 +1,32 @@
-<h1>Players#show</h1>
-<p>Find me in app/views/players/show.html.erb</p>
+<h2 class="title is-4">Players of the NBA</h2>
+
+<p><%= @player.full_Name %></p>
+<p>
+  <strong>Rating:</strong>
+  <%= @player.rating %>%
+  <progress class="progress is-warning" value="<%= @player.rating%>" max="100"></progress>
+</p>
+<p>
+  <strong>Jersey Number:</strong>
+  <%= @player.jersey_No%>
+</p>
+<p>
+  <strong>Birthday:</strong>
+  <%= @player.birthday %>
+</p>
+<p>
+  <strong>Height:</strong>
+  <%= @player.height.sub("-","'") %>"
+</p>
+<p>
+  <strong>Weight:</strong>
+  <%= @player.weight %> lbs.
+</p>
+<p>
+  <strong>Salary:</strong>
+  <%= number_to_currency(@player.salary) %>
+</p>
+<p>
+  <strong>Team:</strong>
+  <%= link_to "#{@player.team.city} #{@player.team.name}", @player.team %>
+</p>
