@@ -1,0 +1,36 @@
+<% if @players.count > 0 %>
+  <h4>Players</h4>
+  <p>Found <%= pluralize(@players.count, "Players") %> when searching for: <%= params[:keywords] %> </p>
+  <ul>
+    <% @players.each do |player| %>
+      <li><%= link_to player.full_Name, player %></li>
+    <% end %>
+  </ul>
+<% end %>
+<% if @teams.count > 0 %>
+  <h4>Teams</h4>
+  <p>Found <%= pluralize(@teams.count, "Teams") %> when searching for: <%= params[:keywords] %> </p>
+  <ul>
+    <% @teams.each do |team| %>
+      <li><%= link_to "#{team.city} #{team.name}", team %></li>
+    <% end %>
+  </ul>
+<% end %>
+<% if @countries.count > 0 %>
+  <h4>Countries</h4>
+  <p>Found <%= pluralize(@countries.count, "Countries") %> when searching for: <%= params[:keywords] %> </p>
+  <ul>
+    <% @countries.each do |country| %>
+      <li><%= link_to country.name, country %></li>
+    <% end %>
+  </ul>
+<% end %>
+<% if @arenas.count > 0 %>
+  <h4>Arenas</h4>
+  <p>Found <%= pluralize(@arenas.count, "Arenas") %> when searching for: <%= params[:keywords] %> </p>
+  <ul>
+    <% @arenas.each do |arena| %>
+      <li><%= link_to arena.name, arena %></li>
+    <% end %>
+  </ul>
+<% end %>
