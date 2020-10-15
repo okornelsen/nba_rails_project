@@ -12,4 +12,6 @@ class Player < ApplicationRecord
   def positions_list
     positions.map(&:position)
   end
+
+  paginates_per 12
 end
