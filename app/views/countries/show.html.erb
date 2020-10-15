@@ -1,2 +1,28 @@
-<h1>Countries#show</h1>
-<p>Find me in app/views/countries/show.html.erb</p>
+<h2 class=""><%= link_to "Countries of the NBA Players", countries_path %></h2>
+
+<h4><%= @country.name %></h4>
+
+<p>
+  <strong>Region:</strong>
+  <%= @country.region.capitalize %>
+</p>
+
+<p>
+  <strong>Population:</strong>
+  <%= number_to_human(@country.population) %>
+</p>
+<p>
+  <% if @country.players.count != 0 %>
+    In the country of <%= @country.name %>, there is 1 NBA Player for every
+    <%= number_with_delimiter(@country.population / @country.players.count) %>
+    people.
+  <% else %>
+    There are no current NBA Players from <%= @country.name %>
+  <% end %>
+</p>
+
+<ul>
+  <% @country.players.each do |player| %>
+    <li><%= link_to player.full_Name, player %></li>
+  <% end %>
+</ul>

@@ -1,2 +1,9 @@
-<h1>Arenas#index</h1>
-<p>Find me in app/views/arenas/index.html.erb</p>
+<h2 class="">Arenas of the NBA</h2>
+
+<ul>
+  <% @arenas.each do |arena| %>
+    <li>
+      <%= link_to "#{arena.name}", arena %>
+    </li>
+  <% end %>
+</ul>
