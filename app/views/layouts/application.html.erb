@@ -13,12 +13,14 @@
 
   <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-      <a class="navbar-brand" href="<%= root_path %>">NBA</a>
+      <a class="navbar-brand ml-5" href="<%= root_path %>">
+        <img src="/assets/nba-logo-transparent.png" alt="NBA Logo" width="24"  href="<%= root_path %>">
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
         aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="basicExampleNav">
+      <div class="collapse navbar-collapse ml-5" id="basicExampleNav">
         <ul class="navbar-nav mr-auto">
               <li class="nav-item"><a class="nav-link" href="<%= teams_path %>">Teams</a></li>
               <li class="nav-item"><a class="nav-link" href="<%= players_path %>">Players</a></li>
@@ -27,7 +29,7 @@
               <li class="nav-item"><a class="nav-link" href="<%= about_index_path %>">About</a></li>
         </ul>
         <%= form_with(url: search_home_index_path, method: :get, local: true, class: "form-inline") do %>
-          <div class="md-form my-0" style="display:flex">
+          <div class="md-form my-0 mr-5" style="display:flex">
             <%= text_field_tag(:keywords, nil, class: :input, placeholder: 'Search', class: "form-control mr-sm-2") %>
             <%= submit_tag("Search", class: "btn btn-light") %>
           </div>
