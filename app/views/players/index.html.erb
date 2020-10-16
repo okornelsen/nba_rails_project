@@ -1,11 +1,22 @@
 <h2 class="">Players of the NBA</h2>
 
-<ul>
-  <% @players.each do |player| %>
-    <li>
-      <%= link_to player.full_Name, player %>
-    </li>
-  <% end %>
-</ul>
+<div class="card-deck">
+  <div class="row">
+    <% @players.each do |player| %>
+      <div class="col-lg-3 col-md-4 col-sm-6 mt-4">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title">#<%= player.jersey_No %></h1>
+            <p class="card-text"><a><%= link_to player.full_Name, player %></a></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><%= link_to "#{player.team.city} #{player.team.name}", player.team %></small>
+            <small class="text-muted"><%= player.rating %></small>
+          </div>
+        </div>
+      </div>
+    <% end %>
+   </div>
+</div>
 
 <%= paginate @players %>
